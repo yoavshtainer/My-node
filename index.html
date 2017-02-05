@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Real-time test</title>
+		<!--<script src="/socket.io/socket.io.js"></script>-->
+    <div id="app-2">
+    <span v-bind:title="message">
+        Hover your mouse over me for a few seconds to see my dynamically bound title!
+      </span>
+    </div>
+    <script src="MyClient.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+	</head>
+	<body>
+
+		<h1>hello world</h1>
+
+		<ul id="tweets">
+			{{INITIAL_TWEETS}}
+		</ul>
+		
+
+		<!--<script type="text/javascript">
+			var socket = io.connect('http://127.0.0.1:1337');	
+			var ul = document.getElementById("tweets");
+			socket.on('tweet', function (tweet) {
+				var li = document.createElement("li");
+				li.innerHTML = "<strong>" + tweet.user.screen_name + ": </strong> " + tweet.text;
+				ul.insertBefore(li, ul.getElementsByTagName("li")[0]);
+			});
+		</script>-->
+	<form action="/1">
+    <input type="submit" value="click here for change" />
+  </form>
+	</body>
+</html>
