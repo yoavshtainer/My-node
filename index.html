@@ -1,35 +1,50 @@
-<html>
-	<head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
 		<title>Real-time test</title>
+
 		<!--<script src="/socket.io/socket.io.js"></script>-->
-    <div id="app-2">
-    <span v-bind:title="message">
-        Hover your mouse over me for a few seconds to see my dynamically bound title!
-      </span>
-    </div>
-    <script src="MyClient.js"></script>
+
+     
+    
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
-	</head>
+    <script src="MyClient.js"></script>
+    
+</head>
+
 	<body>
 
 		<h1>hello world</h1>
 
-		<ul id="tweets">
+    <div id="bla">
+      <p>{{ message }}</p>
+     </div>
+  
+      <div id="bla-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+      </div>
+
+		<ul id="Names">
 			{{INITIAL_TWEETS}}
 		</ul>
 		
 
-		<!--<script type="text/javascript">
-			var socket = io.connect('http://127.0.0.1:1337');	
-			var ul = document.getElementById("tweets");
-			socket.on('tweet', function (tweet) {
+		<script type="text/javascript">
+			var ul = document.getElementById("Names");
 				var li = document.createElement("li");
-				li.innerHTML = "<strong>" + tweet.user.screen_name + ": </strong> " + tweet.text;
+				li.innerHTML = "<strong> " + names + " </strong> ";
 				ul.insertBefore(li, ul.getElementsByTagName("li")[0]);
-			});
-		</script>-->
-	<form action="/1">
+		</script>
+    
+	<form action="/">
     <input type="submit" value="click here for change" />
   </form>
+  <form method = "POST" name="theForm" id="theForm">
+            Name: <input type="text" name="txtName" id="txtName" /><br/>
+            <input type="submit" name="btnSubmit" id="btnSubmit" value="Submit" />
+        </form>
 	</body>
 </html>
