@@ -7,9 +7,25 @@
 
 		<!--<script src="/socket.io/socket.io.js"></script>-->
 
+     <div id="app">
+      <p>{{ message }}</p>
+     </div>
      
+
+     <div id="app-2">
+      <p>{{ message }}</p>
+       <button v-on:click="submit">submit</button>
+     </div>
+     
+     <div id="app-5">
+       <input v-model="message"><br/><br/>
+        <!--<p>{{ message }}</p>-->
+        
+        <button v-on:click="submit">submit</button>
+    </div>
     
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.resource/1.2.0/vue-resource.min.js"></script>
     <script src="MyClient.js"></script>
     
 </head>
@@ -18,24 +34,17 @@
 
 		<h1>hello world</h1>
 
-    <div id="bla">
-      <p>{{ message }}</p>
-     </div>
-  
-      <div id="bla-6">
-        <p>{{ message }}</p>
-        <input v-model="message">
-      </div>
-
+    
 		<ul id="Names">
-			{{INITIAL_TWEETS}}
+	
 		</ul>
 		
 
 		<script type="text/javascript">
+    var hello = "good day!";
 			var ul = document.getElementById("Names");
 				var li = document.createElement("li");
-				li.innerHTML = "<strong> " + names + " </strong> ";
+				li.innerHTML = "<strong> " + hello + " </strong> ";
 				ul.insertBefore(li, ul.getElementsByTagName("li")[0]);
 		</script>
     
